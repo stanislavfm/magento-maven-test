@@ -1,0 +1,30 @@
+<?php /** @var \Maven\Test\Block\Manufacturer\View $block */ ?>
+
+<?php if ($block->hasManufacturers()) : ?>
+    <table class="view-table">
+        <tr>
+            <th><?php echo __('Name'); ?></th>
+            <th><?php echo __('Code'); ?></th>
+            <th></th>
+        </tr>
+        <?php foreach ($block->getManufacturers() as $manufacturer): ?>
+            <tr>
+                <td><?php echo $manufacturer['name']; ?></td>
+                <td><?php echo $manufacturer['code']; ?></td>
+                <td>
+                    <a href="<?php echo $block->getViewDetailsUrl($manufacturer['id']); ?>">
+                        <?php echo __('Details') ?>
+                    </a>
+                </td>
+            </tr>
+        <?php endforeach; ?>
+    </table>
+<?php else: ?>
+    <h4><?php echo __('No Manufacturers added yet.'); ?></h4>
+<?php endif; ?>
+
+<style>
+    .view-table {
+        width: 500px;
+    }
+</style>

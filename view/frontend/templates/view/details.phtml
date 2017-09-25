@@ -1,0 +1,49 @@
+<?php /** @var \Maven\Test\Block\Manufacturer\View\Details $block */ ?>
+
+<?php if ($block->hasImage()): ?>
+    <div>
+        <img class="manufacturer-image" src="<?php echo $block->getImageSrc(); ?>" />
+    </div>
+<?php endif; ?>
+
+<table style="width: 500px">
+    <tr>
+        <th><?php echo __('Name'); ?></th>
+        <td><?php echo $block->getName(); ?></td>
+    </tr>
+    <tr>
+        <th><?php echo __('Code'); ?></th>
+        <td><?php echo $block->getCode(); ?></td>
+    </tr>
+    <?php if ($block->hasDescription()): ?>
+        <tr>
+            <th><?php echo __('Description'); ?></th>
+            <td><?php echo $block->getDescription(); ?></td>
+        </tr>
+    <?php endif; ?>
+    <tr>
+        <th><?php echo __('Updated At'); ?></th>
+        <td><?php echo $block->getUpdatedAt(); ?></td>
+    </tr>
+    <tr>
+        <th><?php echo __('Created At'); ?></th>
+        <td><?php echo $block->getCreatedAt(); ?></td>
+    </tr>
+</table>
+
+<div class="back-to-list">
+    <a href="<?php echo $block->getUrl('*/*/index'); ?>">
+        ← <?php echo __('Back to list'); ?>
+    </a>
+</div>
+
+<style>
+    .manufacturer-image {
+        max-width: 200px;
+        max-height: 200px;
+    }
+
+    .back-to-list {
+        margin-top: 20px;
+    }
+</style>

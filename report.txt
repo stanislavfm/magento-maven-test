@@ -1,0 +1,10 @@
+1. Preparing environment - 2 hrs
+2. Creating module framework - 0.5 hr
+3. Creating and testing setup scripts - 1 hr
+4. Creating models - 0.5 hr
+5. Developing admin
+	- view - 2 hrs
+	- delete - 1 hr
+	- create and edit - 3.5 hrs
+6. Developing frontend - 4 hrs
+7. Refactoring and testing - 5 hrs
